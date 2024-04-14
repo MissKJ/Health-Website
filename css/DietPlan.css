@@ -1,0 +1,343 @@
+/* ============ GOOGLE FONTS =============*/
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap');
+
+
+/* ============ VARIABLE CSS  =============*/
+:root{
+    --header-height : 3.5rem;
+
+    /* ============ COLORS =============*/
+
+    --first-color: hsl(230, 75%, 56%);
+    --title-color: hsl(230, 75%, 15%);
+    --text-color: hsl(230, 12%, 40%);
+    --body-color: hsl(230, 100%, 98%);
+    --container-color: hsl(230, 100%, 97%);
+    --border-color: hsl(230, 25%, 80%);
+
+    /* ============ FONTS =============*/
+
+    --body-font : "syne", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+
+     /* ============ FONT WEIGHT =============*/
+     --font-regular: 400;
+     --font-medium: 500;
+     --font-semi-bold: 600;
+
+      /* ============ Z INDEX =============*/
+      --z-fixed: 100;
+      --z-modal: 1000;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--container-color);
+}
+
+
+
+/* ============ BASE  =============*/
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0px auto;
+    padding: 30px 0px;
+}
+
+/* ============ HERO CONTENT SECTION =============*/
+.hero-content{
+    max-width: 1200px;
+    height: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    margin-top: auto;
+}
+
+.logo{
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo span{
+    background-color: var(--first-color);
+    color: white;
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 200px;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu li a{
+    margin: 0px 2px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all ease 0.3s;
+}
+
+.menu li a:hover{
+    color: var(--first-color);
+}
+
+.nav-login-btn{
+    height: 45px;
+    padding: 0px 20px;
+    border-radius: 4px;
+    background-color: var(--first-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu li {
+    margin-right: 50px; /* Adjust this value to your preference */
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove margin from the last item to prevent extra space */
+}
+
+
+
+
+.services{
+    background: var(--container-color);
+}
+
+.heading{
+    text-align: center;
+    color: var(--title-color);
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 8rem;
+}
+
+.services .box-container .box{
+    text-align: center;
+    padding: 3rem;
+    background: var(--body-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    margin-bottom: 8rem;
+}
+
+.services .box-container .box:hover,
+.services .box-container .box:hover .icon{
+    background: var(--border-color);
+}
+
+.services .box-container .box .icon{
+    width: 13rem;
+    height: 13rem;
+    line-height: 13rem;
+    background: var(--title-color);
+    border-radius: 50%;
+    margin: -11rem auto 2rem;
+    border: 1.8rem solid var(--body-color);
+}
+
+.services .box-container .box .icon img{
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+.services .box-container .box .content h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--text-color);
+}
+
+.services .box-container .box .content .line{
+    background: var(--title-color);
+    width: 30%;
+    height: 0.4rem;
+    margin: 2rem auto;
+    border-radius: 5rem;
+}
+
+.services .box-container .box .content p{
+    font-size: 1.4rem;
+    color: black;
+    line-height: 7;
+}
+
+.services .box-container .box .content ul{
+    margin: 2rem 0;
+    list-style: none;
+}
+
+.services .box-container .box .content ul li{
+    display: flex;
+    align-items: center; 
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    color: black;
+    margin-left: 10px;
+}
+
+.services .box-container .box .content ul li i{
+    font-size: 1.4rem;
+    columns: white;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+
+/* Diet Plan */
+
+.diet .controls{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.diet .controls .buttons{
+    padding: 3rem 3rem;
+    background: var(--body-color);
+    cursor: pointer;
+    margin-bottom: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.diet .controls .buttons img{
+    height: 6rem;
+}
+
+.diet .controls .buttons h3{
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: black;
+}
+
+.diet .controls .buttons.active{
+    background: var(--border-color);
+}
+
+.diet .image-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1.5rem;
+}
+
+.diet .image-container .box{
+    background-color: var(--body-color);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.diet .image-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.diet .image-container .box .image{
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.diet .image-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.diet .image-container .box .content{
+    padding: 2rem;
+}
+
+.diet .image-container .box .content .link{
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.diet .image-container .box .content p{
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 2;
+}
+
+.diet .image-container .box .content .icon{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.diet .image-container .box .content .icon a{
+    font-size: 1.4rem;
+    color: black;
+}
+
+.diet .image-container .box .content .icon a:hover{
+    color: var(--title-color);
+}
+
+.diet .image-container .box .content .icon a i{
+    padding-right: 0.5rem;
+    color: var(--title-color);
+}

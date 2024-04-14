@@ -1,0 +1,249 @@
+/* ============ GOOGLE FONTS =============*/
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap');
+
+
+/* ============ VARIABLE CSS  =============*/
+:root{
+    --header-height : 3.5rem;
+
+    /* ============ COLORS =============*/
+
+    --first-color: hsl(230, 75%, 56%);
+    --title-color: hsl(230, 75%, 15%);
+    --text-color: hsl(230, 12%, 40%);
+    --body-color: hsl(230, 100%, 98%);
+    --container-color: hsl(230, 100%, 97%);
+    --border-color: hsl(230, 25%, 80%);
+
+    /* ============ FONTS =============*/
+
+    --body-font : "syne", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
+
+     /* ============ FONT WEIGHT =============*/
+     --font-regular: 400;
+     --font-medium: 500;
+     --font-semi-bold: 600;
+
+      /* ============ Z INDEX =============*/
+      --z-fixed: 100;
+      --z-modal: 1000;
+
+}
+
+body{
+    font-family: var(--body-font);
+    color: var(--title-color);
+    background-color: var(--body-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  
+}
+
+
+/* ============ HEADER AND NAV =============*/
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0px auto;
+    padding: 30px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+}
+
+/* ============ HERO CONTENT SECTION =============*/
+
+.logo{
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-left: 28px;
+    margin-right: 45px;
+}
+
+.logo span{
+    background-color: var(--first-color);
+    color: white;
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-right: 5px;
+     
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 200px;
+}
+
+.menu li a{
+    margin: 0px 2px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all ease 0.3s;
+    font-size: 0.8rem;
+}
+
+.menu li a:hover{
+    color: var(--first-color);
+}
+
+.nav-login-btn{
+    height: 45px;
+    padding: 0px 20px;
+    border-radius: 4px;
+    background-color: var(--first-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 28px;
+    
+}
+
+.menu li {
+    margin-right: 50px; /* Adjust this value to your preference */
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove margin from the last item to prevent extra space */
+}
+
+
+.section__container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    margin-top: calc(var(--header-height) + 20px); /* Adjust margin top */
+}
+
+.header{
+    margin-bottom: 2rem;
+}
+
+
+.header h1{
+    font-family: "syne", sans-serif;
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.testimonials__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card{
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    background-color: var(--container-color);
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card i{
+    font-size: 2.5rem;
+    color: gold;
+}
+
+.card p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card hr{
+    width: 40px;
+    margin: auto;
+    color: var(--body-color);
+}
+
+.card img{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border-radius: 100%;
+    border: 1px solid var(--title-color);
+}
+
+.card .name{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.card .name:hover{
+    color: var(--title-color);
+}
+
+.footer h4{
+    font-family: "syne", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.footer p{
+    max-width: 450px;
+    margin: auto;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer button{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--container-color);
+    background-color: var(--title-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer button a{
+    text-decoration: none;
+    color:hsl(230, 100%, 98%);
+}
+
+@media (width < 900px) {
+    .testimonials__grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+}
+
+@media (width < 600px) {
+    .testimonials__grid{
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+    }
+}
+
